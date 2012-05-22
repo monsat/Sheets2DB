@@ -238,6 +238,9 @@ class FrontController extends AppController {
 		if (preg_match('/float\((.+?)\)/', $type, $matche)) {
 			return "$type ";
 		}
+		if ($type == 'float') {
+			return "FLOAT ";
+		}
 		if ($type == 'text') {
 			return 'TEXT ';
 		}
